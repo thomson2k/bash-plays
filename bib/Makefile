@@ -1,7 +1,9 @@
 .PHONY: clean
 .SUFFIXES: .c .o .so .a
 PRINT_FILES=pj.c pp.c pg.c pr.c
-
+VPATH = lib
+vpath %.c src
+vpath %.h include
 %.o: %.c
 	gcc -c $<
 lib%.a: p%.o
