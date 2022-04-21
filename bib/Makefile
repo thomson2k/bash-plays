@@ -1,7 +1,9 @@
-toObj: pj.c pp.c pr.c pg.c
-	gcc -c pj.c pp.c pr.c pg.c
-thebeatles: pj.c pp.c pg.c pr.c
-	 gcc thebeatles.c pj.c pp.c pg.c pr.c -o thebeatles
+PRINT_FILES=pj.c pp.c pg.c pr.c
+
+toObj: ${PRINT_FILES}
+	gcc -c ${PRINT_FILES}
+thebeatles: ${PRINT_FILES}
+	 gcc thebeatles.c ${PRINT_FILES} -o thebeatles
 libjp.a: pj.c pp.c
 	ar rs libjp.a pj.o pp.o
 libgr.so: pg.c pr.c
