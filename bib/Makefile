@@ -1,3 +1,4 @@
+.SUFFIXES: .c .o .so .a
 PRINT_FILES=pj.c pp.c pg.c pr.c
 
 toObj: ${PRINT_FILES}
